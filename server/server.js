@@ -20,28 +20,28 @@ const commonFeatureRouter = require("./routes/common/feature-routes");
 
 mongoose
 .connect(
-    'mongodb+srv://taphuongduy308:duy300803@cluster0.mjnz9.mongodb.net/'
+    "mongodb+srv://taphuongduy308:duy300803@cluster0.mjnz9.mongodb.net/"
 )
-.then(() => console.log('MongoDB connected'))
+.then(() => console.log("MongoDB connected"))
 .catch((error) => console.log(error))
 
-const app = express()
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(
-    cors({
-        origin : 'http://localhost:5173/',
-        methods : ['GET', 'POST', 'DELETE', 'PUT'],
-        allowedHeaders : [
-            'Content-Type',
-            'Authorization',
-            'Cache-Control',
-            'Expires',
-            'Pragma'
-        ],
-        credentials : true
-    })
-)
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Cache-Control",
+      "Expires",
+      "Pragma",
+    ],
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 app.use(express.json());
