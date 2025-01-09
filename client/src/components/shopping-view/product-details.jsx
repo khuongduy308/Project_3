@@ -58,7 +58,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
       if (data?.payload?.success) {
         dispatch(fetchCartItems(user?.id));
         toast({
-          title: "Product is added to cart",
+          title: "Sản phẩm đã được thêm vào giỏ hàng",
         });
       }
     });
@@ -86,7 +86,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
         setReviewMsg("");
         dispatch(getReviews(productDetails?._id));
         toast({
-          title: "Review added successfully!",
+          title: "Đã thêm đánh giá thành công!",
         });
       }
     });
@@ -148,7 +148,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
           <div className="mt-5 mb-5">
             {productDetails?.totalStock === 0 ? (
               <Button className="w-full opacity-60 cursor-not-allowed">
-                Out of Stock
+                Hết hàng
               </Button>
             ) : (
               <Button
@@ -160,13 +160,13 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                   )
                 }
               >
-                Add to Cart
+                Thêm vào giỏ hàng
               </Button>
             )}
           </div>
           <Separator />
           <div className="max-h-[300px] overflow-auto">
-            <h2 className="text-xl font-bold mb-4">Reviews</h2>
+            <h2 className="text-xl font-bold mb-4">Đánh giá</h2>
             <div className="grid gap-6">
               {reviews && reviews.length > 0 ? (
                 reviews.map((reviewItem) => (
@@ -190,11 +190,11 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                   </div>
                 ))
               ) : (
-                <h1>No Reviews</h1>
+                <h1>Không có đánh giá</h1>
               )}
             </div>
             <div className="mt-10 flex-col flex gap-2">
-              <Label>Write a review</Label>
+              <Label>Viết đánh giá</Label>
               <div className="flex gap-1">
                 <StarRatingComponent
                   rating={rating}
@@ -211,7 +211,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                 onClick={handleAddReview}
                 disabled={reviewMsg.trim() === ""}
               >
-                Submit
+                OK
               </Button>
             </div>
           </div>

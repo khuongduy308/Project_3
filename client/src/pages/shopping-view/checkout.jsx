@@ -35,7 +35,7 @@ function ShoppingCheckout() {
   function handleInitiatePaypalPayment() {
     if (cartItems.length === 0) {
       toast({
-        title: "Your cart is empty. Please add items to proceed",
+        title: "Giỏ hàng đđang trống, vui lòng thêm sản phẩm",
         variant: "destructive",
       });
 
@@ -43,7 +43,7 @@ function ShoppingCheckout() {
     }
     if (currentSelectedAddress === null) {
       toast({
-        title: "Please select one address to proceed.",
+        title: "Chọn một địa chỉ để tiếp tục",
         variant: "destructive",
       });
 
@@ -120,8 +120,8 @@ function ShoppingCheckout() {
           <div className="mt-4 w-full">
             <Button onClick={handleInitiatePaypalPayment} className="w-full">
               {isPaymentStart
-                ? "Processing Paypal Payment..."
-                : "Checkout with Paypal"}
+                ? "Đang xử lý thanh toán bằng Paypal..."
+                : "Thanh toán bằng Paypal"}
             </Button>
           </div>
         </div>

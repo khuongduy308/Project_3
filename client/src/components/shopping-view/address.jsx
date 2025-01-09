@@ -34,7 +34,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
     if (addressList.length >= 3 && currentEditedId === null) {
       setFormData(initialAddressFormData);
       toast({
-        title: "You can add max 3 addresses",
+        title: "Bạn có thể thêm tối đa 3 địa chỉ",
         variant: "destructive",
       });
 
@@ -54,7 +54,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
             setCurrentEditedId(null);
             setFormData(initialAddressFormData);
             toast({
-              title: "Address updated successfully",
+              title: "Địa chỉ đã được cập nhật thành công",
             });
           }
         })
@@ -68,7 +68,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
             dispatch(fetchAllAddresses(user?.id));
             setFormData(initialAddressFormData);
             toast({
-              title: "Address added successfully",
+              title: "Địa chỉ đã được thêm thành công",
             });
           }
         });
@@ -81,7 +81,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
       if (data?.payload?.success) {
         dispatch(fetchAllAddresses(user?.id));
         toast({
-          title: "Address deleted successfully",
+          title: "Địa chỉ đã xóa thành công",
         });
       }
     });
@@ -128,7 +128,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
       </div>
       <CardHeader>
         <CardTitle>
-          {currentEditedId !== null ? "Edit Address" : "Add New Address"}
+          {currentEditedId !== null ? "Chỉnh sửa địa chỉ" : "Thêm địa chỉ"}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">

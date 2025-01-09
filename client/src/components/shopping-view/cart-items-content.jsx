@@ -53,7 +53,7 @@ function UserCartItemsContent({ cartItem }) {
     ).then((data) => {
       if (data?.payload?.success) {
         toast({
-          title: "Cart item is updated successfully",
+          title: "Mục giỏ hàng đã được cập nhật thành công",
         });
       }
     });
@@ -65,7 +65,7 @@ function UserCartItemsContent({ cartItem }) {
     ).then((data) => {
       if (data?.payload?.success) {
         toast({
-          title: "Cart item is deleted successfully",
+          title: "Mục giỏ hàng đã được xóa thành công",
         });
       }
     });
