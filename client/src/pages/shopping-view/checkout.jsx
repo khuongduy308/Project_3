@@ -35,7 +35,7 @@ function ShoppingCheckout() {
   function handleInitiatePaypalPayment() {
     if (cartItems.length === 0) {
       toast({
-        title: "Giỏ hàng đđang trống, vui lòng thêm sản phẩm",
+        title: "Giỏ hàng đang trống, vui lòng thêm sản phẩm",
         variant: "destructive",
       });
 
